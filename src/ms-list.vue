@@ -1,0 +1,54 @@
+<template>
+  <div v-on:click="handClick">Add Items</div>
+  <comm-list :prodcuts="products"></comm-list>
+</template>
+
+<script>
+  //基于ES6的抒写规范,具体的style 业务逻辑 controller控制等
+  import CommList from './components/comm-list.vue'
+
+  export default{
+    data () {
+      return {
+        products: window.productList
+      }
+    },
+    methods: {
+      handClick: function () {
+        this.products.unshift({
+          imgUrl: 'https://ae01.alicdn.com/kf/HTB1gd2ALVXXXXcRXpXXq6xXFXXXD/Hot-Sexy-Push-Up-Bikinis-Women-Swimwear-Retro-Low-Waist-Bandage-Swimsuit-Print-Cut-Out-Bikini.jpg_350x350.jpg',
+          price: 'US $ 9.64'
+        });
+      }
+    },
+    created() {
+      //钩子的 this 指向调用它的 Vue 实例。
+      console.log('children created!');
+      console.log(this);
+    },
+    beforeCompile() {
+      console.log('children beforeCompile!');
+      console.log(this);
+    },
+    compiled() {
+      console.log('children compiled!');
+      console.log(this);
+    },
+    ready() {
+      console.log('children ready!');
+      console.log(this);
+    },
+    beforeDestroy() {
+      console.log('children beforeDestroy!');
+      console.log(this);
+    },
+    destroyed() {
+      console.log('children destroyed!');
+      console.log(this);
+    },
+    components: {
+      CommList
+    }
+  }
+
+</script>
