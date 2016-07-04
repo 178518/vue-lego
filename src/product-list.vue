@@ -23,15 +23,19 @@
   import Product from './components/product.vue'
 
   export default{
+    //在创建实例时 `events` 选项简单地调用 `$on`
+    events: {
+      //接收到下层传上来的 clickProduct
+      'clickProduct': function (prodcut) {
+        console.log(prodcut);
+      }
+    },
     data () {
       return {
         items: window.productList
       }
     },
-    methods: {
-      handClick: function () {
-      }
-    },
+    methods: {},
     components: {
       Product
     }

@@ -17,6 +17,7 @@
 <script>
   import MsImg from './img.vue'
   import MsPrice from './price.vue'
+  import Pubsub from 'pubsub-js'
 
   export default{
     props: {
@@ -27,7 +28,12 @@
     },
     methods: {
       handClick: function () {
-        console.log(this.prodcut);
+        //console.log(this.prodcut);
+        //使用 $dispatch() 派发事件，事件沿着父链冒泡
+        this.$dispatch('clickProduct', this.prodcut);
+        // 发布事件
+        Pubsub.publish('clickProduct', {product: this.prodcut});
+        console.log('AA');
       }
     },
     components: {

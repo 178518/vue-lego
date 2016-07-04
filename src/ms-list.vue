@@ -6,6 +6,7 @@
 <script>
   //基于ES6的抒写规范,具体的style 业务逻辑 controller控制等
   import CommList from './components/comm-list.vue'
+  import Pubsub from 'pubsub-js'
 
   export default{
     data () {
@@ -27,24 +28,29 @@
       console.log(this);
     },
     beforeCompile() {
-      console.log('children beforeCompile!');
-      console.log(this);
+      //console.log('children beforeCompile!');
+      //console.log(this);
     },
     compiled() {
-      console.log('children compiled!');
-      console.log(this);
+      //console.log('children compiled!');
+      //console.log(this);
     },
     ready() {
-      console.log('children ready!');
-      console.log(this);
+      //console.log('children ready!');
+      //console.log(this);
+      //订阅事件
+      this.clickProductSubscribe = Pubsub.subscribe('clickProduct', function (msg, data) {
+        // 获得选项信息，进行相应处理
+        console.log(data);
+      });
     },
     beforeDestroy() {
       console.log('children beforeDestroy!');
       console.log(this);
     },
     destroyed() {
-      console.log('children destroyed!');
-      console.log(this);
+      //console.log('children destroyed!');
+      //console.log(this);
     },
     components: {
       CommList

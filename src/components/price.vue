@@ -20,8 +20,7 @@
       price: {
         type: String,
         required: true
-      },
-
+      }
     }
   }
 </script>
