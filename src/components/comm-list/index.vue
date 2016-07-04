@@ -20,7 +20,7 @@
 </style>
 
 <script>
-  import Product from './product.vue'
+  import Product from '../product/index.vue'
 
   export default{
     props: {

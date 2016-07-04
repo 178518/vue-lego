@@ -20,7 +20,7 @@
 </style>
 
 <script>
-  import Product from './components/product.vue'
+  import Product from './components/product/index.vue'
 
   export default{
     data () {

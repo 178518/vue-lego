@@ -15,8 +15,8 @@
 </style>
 
 <script>
-  import MsImg from './img.vue'
-  import MsPrice from './price.vue'
+  import MsImg from '../img/index.vue'
+  import MsPrice from '../price/index.vue'
   import Pubsub from 'pubsub-js'
 
   export default{
