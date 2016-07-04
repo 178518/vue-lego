@@ -32,8 +32,8 @@
         //使用 $dispatch() 派发事件，事件沿着父链冒泡
         this.$dispatch('clickProduct', this.prodcut);
         // 发布事件
-        Pubsub.publish('clickProduct', {product: this.prodcut});
-        console.log('AA');
+        //Pubsub.publish('clickProduct', {product: this.prodcut});
+        //console.log('message publish complete!');
       }
     },
     components: {

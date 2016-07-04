@@ -14,6 +14,14 @@
         products: window.productList
       }
     },
+    //在创建实例时 `events` 选项简单地调用 `$on`
+    events: {
+      //接收到下层传上来的 clickProduct
+      'clickProduct': function (prodcut) {
+        console.log('receive complete by vue!');
+        console.log(prodcut);
+      }
+    },
     methods: {
       handClick: function () {
         this.products.unshift({
@@ -41,7 +49,8 @@
       //订阅事件
       this.clickProductSubscribe = Pubsub.subscribe('clickProduct', function (msg, data) {
         // 获得选项信息，进行相应处理
-        console.log(data);
+        //console.log('receive complete by Pubsub!');
+        //console.log(data);
       });
     },
     beforeDestroy() {
