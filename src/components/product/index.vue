@@ -26,6 +26,12 @@
         required: true
       }
     },
+    events: {
+      handImgClick: function (imgObject) {
+        console.log('receive event from img child and boradcast to child');
+        this.$broadcast('handImgClick', imgObject)
+      }
+    },
     methods: {
       handClick: function () {
         //console.log(this.prodcut);

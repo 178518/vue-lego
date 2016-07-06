@@ -1,5 +1,5 @@
 <template>
-  <div class="ms-pic">
+  <div class="ms-pic" v-on:click="handImgClick">
     <img :src="imgurl"/>
   </div>
 </template>
@@ -34,6 +34,12 @@
       imgurl: {
         type: String,
         required: true
+      }
+    },
+    methods: {
+      handImgClick: function () {
+        //派遣事件到父组件
+        this.$dispatch('handImgClick',this.imgurl);
       }
     }
   }

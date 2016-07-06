@@ -21,6 +21,12 @@
         type: String,
         required: true
       }
+    },
+    events: {
+      handImgClick: function (imgObject) {
+        console.log('i know img is click!');
+        console.log(imgObject);
+      }
     }
   }
 </script>

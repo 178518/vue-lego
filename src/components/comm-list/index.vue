@@ -22,11 +22,17 @@
 <script>
   import Product from '../product/index.vue'
 
+  //父传子方法,属性传递 props
   export default{
     props: {
       prodcuts: {
         type: Array,
         required: true
+      }
+    },
+    events: {
+      clickAdd: function () {
+        console.log('parent Add has Click!');
       }
     },
     components: {
