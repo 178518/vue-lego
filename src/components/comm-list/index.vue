@@ -6,6 +6,10 @@
       </li>
     </ul>
   </div>
+  <loading color="spinner-red-only" :active="true"></loading>
+  <loading type="big" color="spinner-blue-only" :active="true"></loading>
+  <loading color="spinner-yellow-only" :active="true"></loading>
+  <loading type="big" color="spinner-green-only" :active="true"></loading>
 </template>
 
 <style lang="less">
@@ -21,6 +25,7 @@
 
 <script>
   import Product from '../product/index.vue'
+  import Loading from '../loading/index.vue'
 
   //父传子方法,属性传递 props
   export default{
@@ -28,6 +33,12 @@
       prodcuts: {
         type: Array,
         required: true
+      },
+      type: {
+        type: String
+      },
+      active: {
+        type: Boolean
       }
     },
     events: {
@@ -36,7 +47,8 @@
       }
     },
     components: {
-      Product
+      Product,
+      Loading
     }
   }
 </script>

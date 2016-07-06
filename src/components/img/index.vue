@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style lang="less">
   .ms-pic {
     background: #fff;
     display: -webkit-box;
