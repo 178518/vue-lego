@@ -5,7 +5,8 @@
 
 <script>
   //基于ES6的抒写规范,具体的style 业务逻辑 controller控制等
-  import CommList from './components/comm-list/index.vue'
+  //import CommList from './components/comm-list/index.vue'
+  import CommList from 'vue-lego/comm-list/index.vue'
   import Pubsub from 'pubsub-js'
 
   export default{

@@ -1,5 +1,5 @@
 {
-  "name": "vue-lego",
+  "name": "lego",
   "version": "0.0.1",
   "description": "vue lego",
   "main": "index.js",
@@ -13,7 +13,8 @@
   "dependencies": {
     "vue": "^1.0.10",
     "jquery": "2.2.2",
-    "pubsub-js": "^1.5.2"
+    "pubsub-js": "^1.5.2",
+    "vue-lego": "0.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",

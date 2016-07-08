@@ -20,7 +20,8 @@
 </style>
 
 <script>
-  import Product from './components/product/index.vue'
+  //import Product from './components/product/index.vue'
+  import Product from 'vue-lego/index.vue'
 
   export default{
     data () {
