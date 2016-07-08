@@ -1,7 +1,7 @@
 <template>
   <div v-on:click="handClick">Add Items</div>
 
-  <container>
+  <container v-on:container-click="handleIt">
     12345
   </container>
 
@@ -46,6 +46,10 @@
 
         //父传子方法,广播事件传递 vm.$broadcast
         this.$broadcast('clickAdd');
+      },
+      handleIt:function(){
+        console.log('使用on()监听事件,接收子组件dispatch过来的事件!');
+        console.log('AAAA');
       }
     },
     created() {

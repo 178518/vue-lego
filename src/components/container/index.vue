@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:style="{padding:padding}">
+  <div v-bind:style="{padding:padding}" v-on:click="handClick">
     <slot></slot>
   </div>
 </template>
@@ -29,6 +29,12 @@
     events: {
       emitFun: function () {
         console.log('emitFun');
+      }
+    },
+    methods: {
+      handClick: function () {
+        //基于on绑定事件必须小写,不支持驼峰命名,暂不清楚原因
+        this.$dispatch('container-click');
       }
     },
     ready() {

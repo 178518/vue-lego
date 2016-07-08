@@ -5,6 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
+  //entry: './src/test.js',
   entry: './src/ms-list.js',
   output: {
     path: './.build',
