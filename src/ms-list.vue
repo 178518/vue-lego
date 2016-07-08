@@ -1,5 +1,17 @@
 <template>
   <div v-on:click="handClick">Add Items</div>
+
+  <container>
+    12345
+  </container>
+
+  <container>
+    <text max-height="60px" line-height="20px" font-size="16px" :line="1">
+      Rompers Women Jumpsuit 2016 New Fashion Solid Color Sleeveless Sexy Backless Round Neck Knitted Bodycon Grey Long
+      Pant Jumpsuits
+    </text>
+  </container>
+
   <comm-list :prodcuts="products"></comm-list>
 </template>
 
@@ -7,6 +19,8 @@
   //基于ES6的抒写规范,具体的style 业务逻辑 controller控制等
   //import CommList from './components/comm-list/index.vue'
   import CommList from 'vue-lego/comm-list/index.vue'
+  import Container from './components/container/index.vue'
+  import Text from './components/text/index.vue'
   import Pubsub from 'pubsub-js'
 
   export default{
@@ -66,7 +80,9 @@
       //console.log(this);
     },
     components: {
-      CommList
+      CommList,
+      Container,
+      Text
     }
   }
 
