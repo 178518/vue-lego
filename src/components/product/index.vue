@@ -29,8 +29,12 @@
     events: {
       handImgClick: function (imgObject) {
         console.log('receive event from img child and boradcast to child');
-        this.$broadcast('handImgClick', imgObject)
-      }
+        this.$broadcast('handImgClick', imgObject);
+      }/*,
+      scrollToBottom: function (scrollObject) {
+        console.log('Child');
+        console.log(scrollObject);
+      }*/
     },
     methods: {
       handClick: function () {
