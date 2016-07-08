@@ -1,0 +1,31 @@
+{
+  "name": "vue-lego",
+  "version": "0.0.1",
+  "description": "vue lego component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/178518/vue-lego.git"
+  },
+  "keywords": [
+    "vue",
+    "componet"
+  ],
+  "dependencies": {
+    "vue": "^1.0.10",
+    "jquery": "2.2.2",
+    "pubsub-js": "^1.5.2"
+  },
+  "author": "178518",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/178518/vue-lego/issues"
+  },
+  "homepage": "https://github.com/178518/vue-lego#readme"
+}
