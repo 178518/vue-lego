@@ -4,9 +4,10 @@
   <container v-on:container-click="handleIt">
     12345
   </container>
+  $emit()
 
   <container>
-    <text max-height="60px" line-height="20px" font-size="16px" :line="1">
+    <text max-height="60px" line-height="20px" font-size="18px" :line="2">
       Rompers Women Jumpsuit 2016 New Fashion Solid Color Sleeveless Sexy Backless Round Neck Knitted Bodycon Grey Long
       Pant Jumpsuits
     </text>
