@@ -7,7 +7,7 @@
   $emit()
 
   <container>
-    <text max-height="60px" line-height="20px" font-size="18px" :line="2">
+    <text max-height="60px" line-height="20px" font-size="20px" :line="3">
       Rompers Women Jumpsuit 2016 New Fashion Solid Color Sleeveless Sexy Backless Round Neck Knitted Bodycon Grey Long
       Pant Jumpsuits
     </text>
