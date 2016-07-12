@@ -4,11 +4,11 @@
   <container v-on:container-click="handleIt">
     12345
   </container>
-  $emit()
 
   <container>
     <text max-height="60px" line-height="20px" font-size="20px" :line="3">
-      Rompers Women Jumpsuit 2016 New Fashion Solid Color Sleeveless Sexy Backless Round Neck Knitted Bodycon Grey Long
+      Rompers Women Jumpsuit 2016 New Fashion Solid Color Sleeveless Sexy Backless Round Neck Knitted Bodycon Grey
+      Long
       Pant Jumpsuits
     </text>
   </container>
@@ -16,10 +16,14 @@
   <comm-list :prodcuts="products"></comm-list>
 </template>
 
+<style lang="less">
+
+</style>
+
 <script>
   //基于ES6的抒写规范,具体的style 业务逻辑 controller控制等
-  //import CommList from './components/comm-list/index.vue'
-  import CommList from 'vue-lego/comm-list/index.vue'
+  import CommList from './components/comm-list/index.vue'
+  //import CommList from 'vue-lego/comm-list/index.vue'
   import Container from './components/container/index.vue'
   import Text from './components/text/index.vue'
   import Pubsub from 'pubsub-js'
@@ -48,7 +52,7 @@
         //父传子方法,广播事件传递 vm.$broadcast
         this.$broadcast('clickAdd');
       },
-      handleIt:function(){
+      handleIt: function () {
         console.log('使用on()监听事件,接收子组件dispatch过来的事件!');
         console.log('AAAA');
       }
@@ -68,7 +72,6 @@
     },
     ready() {
       //console.log('children ready!');
-      //console.log(this);
       //订阅事件
       this.clickProductSubscribe = Pubsub.subscribe('clickProduct', function (msg, data) {
         // 获得选项信息，进行相应处理

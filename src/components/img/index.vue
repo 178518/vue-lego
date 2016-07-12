@@ -1,5 +1,5 @@
 <template>
-  <div class="ms-pic" v-on:click="handImgClick">
+  <div v-cloak class="ms-pic" v-on:click="handImgClick">
     <img :src="imgurl"/>
   </div>
 </template>

@@ -1,8 +1,12 @@
 <template>
-  <div class="ms-price ms-text-align">{{price}}</div>
+  <div v-cloak class="ms-price ms-text-align">{{price}}</div>
 </template>
 
 <style lang="less">
+  [v-cloak] {
+    display: none;
+  }
+
   .ms-price {
     height: 40px;
     font-size: 14px;

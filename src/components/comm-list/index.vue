@@ -1,5 +1,6 @@
 <template>
   <container>
+    <!--<div class="product-list" v-bind:class="{'product-list-show':canShow}">-->
     <div class="product-list">
       <ul class="util-clearfix">
         <li v-for="item in prodcuts">
@@ -27,6 +28,10 @@
     width: 50%;
     float: left;
   }
+
+  .product-list-show {
+    display: block;
+  }
 </style>
 
 <script>
@@ -38,6 +43,12 @@
   //父传子方法,属性传递 props
   export default{
     props: {
+      canShow: {
+        type: Boolean,
+        default: function () {
+          return false
+        }
+      },
       prodcuts: {
         type: Array,
         required: true
@@ -48,6 +59,12 @@
       active: {
         type: Boolean
       }
+    },
+    ready() {
+      /*let self = this;
+      setTimeout(function () {
+        self.canShow = true;
+      }, 1000);*/
     },
     events: {
       clickAdd: function () {
